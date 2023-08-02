@@ -38,7 +38,7 @@ export default function Home() {
                     </button>
                     <div>
                         {roulette.map((el, index) => {
-                            return <Card name={roulette[index]} randomizeAll={randomizeAll} />;
+                            return <Card name={roulette[index]} randomizeAll={randomizeAll} key={index} />;
                         })}
                     </div>
                 </div>

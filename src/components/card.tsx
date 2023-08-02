@@ -23,7 +23,10 @@ export default function Card(props: any) {
         setCurrentJobName(playerOneJobName[randomJob - 1]);
     }, [randomJob]);
     return (
-        <div className=" flex-wrap flex flex-grow flex-shrink flex-row  bg-[#333333] bg-opacity-60 mt-3 mb-3 ml-12 mr-12 p-6 rounded-xl shadow-md shadow-slate-400">
+        <div
+            key={props.key}
+            className=" flex-wrap flex flex-grow flex-shrink flex-row  bg-[#333333] bg-opacity-60 mt-3 mb-3 ml-12 mr-12 p-6 rounded-xl shadow-md shadow-slate-400"
+        >
             <button
                 onClick={randomizeJob}
                 className="h-12 pl-3 pr-3 pt-3 pb-3 mt-auto mb-auto shadow-inner bg-gradient-radial bg-opacity-70 from-blue-900 to-blue-500"
